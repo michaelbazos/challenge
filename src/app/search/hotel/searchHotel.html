@@ -1,17 +1,23 @@
 <div class="search-hotel">
-  <form class="search-form" ng-submit="::vm.loadHotels({count: 5})" novalidate>
+  <form ng-submit="::vm.loadHotels({count: 5})" novalidate>
+    <div class="search-hotel__input text-center">
+      <button type="submit" class="btn btn-lg btn-primary" translate="search.buttons.loadhotels"></button>
+      <label>
+        <input type="checkbox" ng-model="vm.forceError" ng-true-value="'1'"/>
+        {{'search.forceError' | translate}}
+      </label>
+    </div>
 
-    <input type="submit" value="{{'search.buttons.loadhotels' | translate}}" />
-    <label>
-      <input type="checkbox" ng-model="vm.forceError" ng-true-value="'1'"/>
-      {{'search.forceError' | translate}}
-    </label>
+    <div class="container">
+      <div class="search-hotel__pending" ng-show="vm.searchHotelForm.pending">
+        <i class="fa fa-cog fa-spin"></i>
+      </div>
 
-    <div class="results">
-      <div ng-show="vm.searchHotelForm.pending">{{'search.pending' | translate}}</div>
-      <div ng-show="vm.searchHotelForm.error">{{'search.error' | translate}}</div>
+      <div class="search-hotel__errors alert alert-danger" ng-show="vm.searchHotelForm.error">{{'search.error' | translate}}</div>
 
-      <hotel-card ng-repeat="hotel in vm.hotels" hotel="hotel"></hotel-card>
+      <div class="search-hotel__results">
+        <hotel-card ng-repeat="hotel in vm.hotels" hotel="hotel"></hotel-card>
+      </div>
     </div>
   </form>
 </div>

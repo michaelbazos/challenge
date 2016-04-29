@@ -1,3 +1,20 @@
 .search-hotel {
-  text-align: center;
+  padding: 1rem 3rem;
+
+  &__pending {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  &__errors {
+    font-weight: bold;
+  }
+
+  &__input {
+    margin-bottom: 2rem;
+
+    label {
+      cursor: pointer;
+    }
+  }
 }

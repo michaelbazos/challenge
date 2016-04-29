@@ -1,19 +1,27 @@
-<div class="hotel-card container">
-  <!--<pre>{{vm.hotel | json}}</pre>-->
-
-  <div class="col-sm-4">
+<div class="hotel-card row">
+  <div class="carousel col-sm-5">
     <uib-carousel>
       <uib-slide ng-repeat="image in vm.hotel.images">
-        <img ng-src="{{image}}">
+        <img class="carousel__image" ng-src="{{image}}">
       </uib-slide>
     </uib-carousel>
   </div>
 
-  <div class="col-sm-8">
-    <div class="hotel-card__name">{{::vm.hotel.name}}</div>
-    <div class="hotel-card__rating"></div>
-    <div class="hotel-card__location">{{::vm.hotel.city + ' - ' + vm.hotel.country}}</div>
-    <div class="hotel-card__description">{{::vm.hotel.description}}</div>
-    <div class="hotel-card__price">{{::vm.hotel.price | currency}}</div>
+  <div class="excerpt col-sm-7">
+    <div class="excerpt-header">
+      <h3 class="excerpt__name">{{::vm.hotel.name}}</h3>
+      <hotel-rating></hotel-rating>
+    </div>
+    <div class="excerpt__rating"></div>
+    <div class="excerpt__location">{{::vm.hotel.city + ' - ' + vm.hotel.country}}</div>
+    <div class="excerpt__description">{{::vm.hotel.description}}</div>
+
+    <div class="excerpt-sub">
+      <button type="button" class="btn btn-primary" translate="hotel.buttons.showreviews" ng-click="::vm.showReviews(vm.hotel)"></button>
+      <div class="excerpt-price-block _pull-right">
+        <div class="excerpt__price">{{::vm.hotel.price | currency}}</div>
+        <div class="excerpt__price-validity-period">{{::vm.hotel.date_start | date}} - {{::vm.hotel.date_end | date}}</div>
+      </div>
+    </div>
   </div>
 </div>

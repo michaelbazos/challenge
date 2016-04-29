@@ -1,3 +1,35 @@
 .hotel-card {
+  background: #ddd;
+  border: 1px solid #aaa;
+  margin-bottom: 2rem;
 
+  .carousel {
+    &__image {
+      width: 100%;
+    }
+  }
+
+  .excerpt {
+    padding: 0 1.5rem 1rem;
+
+    &__name {
+      text-transform: capitalize;
+    }
+
+    &__description {
+      margin-top: 2rem;
+    }
+
+    .excerpt-sub {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+
+    &__price {
+      font-size: 2em;
+      text-align: right;
+    }
+  }
 }
