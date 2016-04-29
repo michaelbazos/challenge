@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app')
+    .module('app.common')
     .constant('API', {
       origin: 'http://fake-hotel-api.herokuapp.com/api'
     });

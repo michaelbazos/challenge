@@ -5,7 +5,9 @@
     .module('app.components', [
       'pascalprecht.translate',
       'toastr',
-      'ui.bootstrap'
+      'ui.bootstrap',
+      
+      'app.common'
     ]);
 
 })();

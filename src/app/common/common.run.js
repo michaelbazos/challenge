@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('app.search')
+    .module('app.common')
     .run(runBlock);
 
   function runBlock($log) {
-    $log.debug('search module initialized');
+    $log.debug('common module initialized');
   }
 
 })();

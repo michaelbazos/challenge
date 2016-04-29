@@ -6,6 +6,7 @@
       'pascalprecht.translate',
       'ui.router',
 
+      'app.common',
       'app.components'
     ]);
 

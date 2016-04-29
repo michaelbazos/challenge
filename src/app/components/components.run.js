@@ -6,7 +6,6 @@
     .run(runBlock);
 
   function runBlock($log) {
-
     $log.debug('components module initialized');
   }
 
