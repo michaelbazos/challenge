@@ -10,20 +10,25 @@ This is a sample application for an interview. The task is the following:
 
 ## Quick start
 
-### Clone project, install dependencies and start the application (in dev mode)
+### Clone project and install dependencies
 
 ```bash
 git clone https://github.com/michaelbazos/challenge.git && cd challenge
 
 npm i
+```
+###  Start the application (in dev mode)
 
+The following command will serve the application in development mode, with livereload
+
+```bash
 npm start
 ```
 
 The application is served at [http://localhost:3000](http://localhost:3000) or at the next available port.
 
 
-## Build and serve in production mode
+### Start the application (in production mode)
 
 The following command will build and serve the application in production mode
 
@@ -31,7 +36,7 @@ The following command will build and serve the application in production mode
 npm run serve:dist
 ```
 
-If you only want to build for production, execute `npm run build`
+Note: if you only want to build the app in production mode and not serve it, just execute `npm run build`
 
 
 ## Tests
