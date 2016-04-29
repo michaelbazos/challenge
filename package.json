@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "dependencies": {},
   "scripts": {
-    "app:build": "gulp",
-    "app:serve": "gulp serve",
+    "serve": "gulp serve",
+    "serve:dist": "gulp serve:dist",
+    "build": "gulp",
     "postinstall": "bower install",
-    "start": "npm run app:serve",
+    "start": "npm run serve",
     "test": "gulp test"
   },
   "devDependencies": {
