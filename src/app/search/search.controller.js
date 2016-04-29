@@ -3,9 +3,9 @@
 
   angular
     .module('app')
-    .controller('HomeController', HomeController);
+    .controller('SearchController', SearchController);
 
-  function HomeController() {
+  function SearchController() {
     var vm = this;
 
     vm.message = 'AHOI WORLD!';
