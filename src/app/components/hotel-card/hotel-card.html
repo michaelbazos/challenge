@@ -1,27 +1,37 @@
 <div class="hotel-card row">
-  <div class="carousel col-sm-5">
-    <uib-carousel>
-      <uib-slide ng-repeat="image in vm.hotel.images track by $index">
-        <img class="carousel__image" ng-src="{{image}}">
-      </uib-slide>
-    </uib-carousel>
-  </div>
-
-  <div class="excerpt col-sm-7">
-    <div class="excerpt-header">
-      <h3 class="excerpt__name">{{::vm.hotel.name}}</h3>
-      <uib-rating readonly="true" ng-model="::vm.hotel.rating"></uib-rating>
+  <div class="row">
+    <div class="carousel col-sm-5">
+      <uib-carousel>
+        <uib-slide ng-repeat="image in vm.hotel.images track by $index">
+          <img class="carousel__image" ng-src="{{image}}">
+        </uib-slide>
+      </uib-carousel>
     </div>
-    <div class="excerpt__rating"></div>
-    <div class="excerpt__location">{{::vm.hotel.city + ' - ' + vm.hotel.country}}</div>
-    <div class="excerpt__description">{{::vm.hotel.description}}</div>
 
-    <div class="excerpt-sub">
-      <button type="button" class="btn btn-primary" translate="hotel.buttons.showreviews" ng-click="::vm.showReviews(vm.hotel)"></button>
-      <div class="excerpt-price-block _pull-right">
-        <div class="excerpt__price">{{::vm.hotel.price | currency}}</div>
-        <div class="excerpt__price-validity-period">{{::vm.hotel.date_start | date}} - {{::vm.hotel.date_end | date}}</div>
+    <div class="excerpt col-sm-7">
+      <div class="excerpt-header">
+        <h3 class="excerpt__name">{{::vm.hotel.name}}</h3>
+        <uib-rating readonly="true" ng-model="::vm.hotel.rating"></uib-rating>
+      </div>
+      <div class="excerpt__rating"></div>
+      <div class="excerpt__location">{{::vm.hotel.city + ' - ' + vm.hotel.country}}</div>
+      <div class="excerpt__description">{{::vm.hotel.description}}</div>
+
+      <div class="excerpt-sub">
+        <button type="button" class="btn btn-primary" translate="hotel.buttons.showreviews" ng-click="::vm.showReviews(vm.hotel.id)"></button>
+        <div class="excerpt-price-block _pull-right">
+          <div class="excerpt__price">{{::vm.hotel.price | currency}}</div>
+          <div class="excerpt__price-validity-period">{{::vm.hotel.date_start | date}} - {{::vm.hotel.date_end | date}}</div>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="review-list" ng-if="vm.reviews">
+    <div class="review-component" ng-repeat="review in vm.reviews">
+      <hotel-review review="review"></hotel-review>
+    </div>
+    <div ng-show="vm.reviews.length === 0" translate="hotel.reviews.noreview"></div>
+    <div ng-show="vm.reviews.error" translate="hotel.noreviews"></div>
   </div>
 </div>

@@ -2,6 +2,10 @@
   "hotel": {
     "buttons": {
       "showreviews": "Show reviews"
+    },
+    "reviews": {
+      "noreview": "This hotel has no review yet",
+      "error": "An error occured while fetching reviews"
     }
   }
 }

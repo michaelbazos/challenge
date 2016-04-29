@@ -4,6 +4,7 @@
   angular
     .module('app.components', [
       'pascalprecht.translate',
+      'toastr',
       'ui.bootstrap'
     ]);
 
