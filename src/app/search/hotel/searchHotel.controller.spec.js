@@ -1,13 +1,13 @@
 (function() {
   'use strict';
 
-  describe('search controller', function(){
+  describe('search hotel controller', function(){
     var vm;
 
     beforeEach(function () {
-      module('app');
+      module('app.search');
       inject(function(_$controller_) {
-        vm = _$controller_('SearchController');
+        vm = _$controller_('SearchHotelController');
       });
     });
 

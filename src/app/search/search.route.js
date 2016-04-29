@@ -2,15 +2,15 @@
   'use strict';
 
   angular
-    .module('app')
+    .module('app.search')
     .config(routerConfig);
 
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('search', {
         url: '/search',
-        templateUrl: 'app/search/search.html',
-        controller: 'SearchController',
+        templateUrl: 'app/search/hotel/searchHotel.html',
+        controller: 'SearchHotelController',
         controllerAs: 'vm'
       });
 
