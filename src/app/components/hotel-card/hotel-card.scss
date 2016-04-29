@@ -12,6 +12,12 @@
   .excerpt {
     padding: 0 1.5rem 1rem;
 
+    .excerpt-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     &__name {
       text-transform: capitalize;
     }
