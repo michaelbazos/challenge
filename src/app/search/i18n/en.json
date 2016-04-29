@@ -3,6 +3,9 @@
     "buttons": {
       "loadhotels": "Load Hotels",
       "showreviews": "Show reviews"
-    }
+    },
+    "error": "An error occured",
+    "forceError": "Force error",
+    "pending": "Hold tight while we are fetching results"
   }
 }
