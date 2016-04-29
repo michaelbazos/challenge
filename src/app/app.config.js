@@ -3,11 +3,19 @@
 
   angular
     .module('app')
-    .config(config);
+    .config(logConfiguration)
+    .config(translateConfiguration);
 
-  function config($logProvider) {
-    // Enable log
+  function logConfiguration($logProvider) {
     $logProvider.debugEnabled(true);
   }
 
+  function translateConfiguration($translateProvider, $translatePartialLoaderProvider) {
+    $translateProvider.useLoader('$translatePartialLoader', {
+      urlTemplate: '/app/{part}/i18n/{lang}.json'
+    });
+    $translateProvider.preferredLanguage('en');
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
+    $translatePartialLoaderProvider.addPart('search');
+  }
 })();

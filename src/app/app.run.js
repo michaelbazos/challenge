@@ -7,7 +7,7 @@
 
   function runBlock($log) {
 
-    $log.debug('runBlock end');
+    $log.debug('app module initialized');
   }
 
 })();
