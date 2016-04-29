@@ -1,4 +1,4 @@
-# Challenge
+# Challenge [![Build Status](https://travis-ci.org/michaelbazos/challenge.svg?branch=dev)](https://travis-ci.org/michaelbazos/challenge)
 
 This is a sample application for an interview. The task is the following:
 
