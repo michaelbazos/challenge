@@ -8,6 +8,9 @@
     "app:serve": "gulp serve",
 
     "postinstall": "bower install",
+
+    "start": "npm run app:serve",
+
     "test": "gulp test"
   },
   "devDependencies": {
