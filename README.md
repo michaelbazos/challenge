@@ -6,7 +6,7 @@ This is a sample application for an interview. The task is the following:
 
 ## Requirements
 
-* [Node.js](http://nodejs.org/) >= 4.x with `npm`
+* [Node.js](http://nodejs.org/) (0.12 or above) with `npm`
 
 ## Quick start
 
