@@ -23,15 +23,15 @@ npm start
 The application is served at [http://localhost:3000](http://localhost:3000) or at the next available port.
 
 
-## Build and serve app in production mode
+## Build and serve in production mode
 
-The following command will build and serve the app in production mode
+The following command will build and serve the application in production mode
 
 ```bash
 npm run serve:dist
 ```
 
-If you only want to build for production, execute ``npm run build`
+If you only want to build for production, execute `npm run build`
 
 
 ## Tests
