@@ -6,11 +6,8 @@
   "scripts": {
     "app:build": "gulp",
     "app:serve": "gulp serve",
-
     "postinstall": "bower install",
-
     "start": "npm run app:serve",
-
     "test": "gulp test"
   },
   "devDependencies": {
@@ -44,6 +41,7 @@
     "gulp-useref": "~3.0.3",
     "gulp-util": "~3.0.6",
     "http-proxy-middleware": "~0.9.0",
+    "jasmine-core": "~2.4.1",
     "karma": "~0.13.10",
     "karma-angular-filesort": "~1.0.0",
     "karma-coverage": "~0.5.2",
