@@ -2,11 +2,9 @@
   'use strict';
 
   angular
-    .module('app.search', [
+    .module('app.components', [
       'pascalprecht.translate',
-      'ui.router',
-
-      'app.components'
+      'ui.bootstrap'
     ]);
 
 })();
